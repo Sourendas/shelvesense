@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShelfSense — Catalogue + Review Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>ShelfSense</h1>
+      <p class="tag">AMD ACT III · Reinvent Commerce · offline MVP</p>
+    </div>
+    <div class="badge" id="health">loading…</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>1. Catalogue</h2>
+      <p class="hint">Sample commerce data enriched with rule-based attributes (deterministic). Empty skin_type / concerns are filled from title, description, and reviews.</p>
+      <div class="toolbar">
+        <button id="btn-load" type="button">Load &amp; enrich</button>
+        <span id="cat-meta"></span>
+      </div>
+      <div class="table-wrap">
+        <table id="catalogue">
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Title</th>
+              <th>Skin</th>
+              <th>Concerns</th>
+              <th>Ingredients</th>
+              <th>★</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>2. Shopper Q&amp;A</h2>
+      <p class="hint">Ask in natural language. Retrieval is a <strong>local TF-IDF stub</strong> — labeled for swap to AMD ROCm embeddings later.</p>
+      <form id="ask-form">
+        <input id="question" type="text" placeholder='e.g. which SKU for dry skin?' value="which SKU for dry skin?" autocomplete="off" />
+        <button type="submit">Ask</button>
+      </form>
+      <div class="chips">
+        <button type="button" class="chip" data-q="which SKU for dry skin?">dry skin</button>
+        <button type="button" class="chip" data-q="best SPF mineral sunscreen">SPF</button>
+        <button type="button" class="chip" data-q="serum for pores and uneven tone">pores</button>
+        <button type="button" class="chip" data-q="cleanser that does not strip dry skin">gentle cleanser</button>
+      </div>
+      <article id="answer" class="answer empty">Ask a question to see recommendations + citations.</article>
+      <div id="recs"></div>
+      <div id="cites"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Zero spend · no API keys · MIT · AMD GPU plug-in documented in <code>app/similarity.py</code></p>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
