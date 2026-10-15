@@ -1,0 +1,26 @@
+sku,title,description,category,brand,price_usd,skin_type,concerns,key_ingredients,size
+SS-001,HydraGlow Daily Moisturizer,"Lightweight cream that locks in moisture all day. Fragrance-free formula for sensitive routines.",Skincare,AuraLab,24.99,,,hyaluronic acid; glycerin,50ml
+SS-002,CalmSkin Repair Balm,"Rich overnight balm for cracked dry patches. Non-comedogenic.",Skincare,AuraLab,29.50,dry,,,30ml
+SS-003,ClearStart Foaming Cleanser,"Gentle gel cleanser that removes oil without stripping. Suitable for morning and night.",Skincare,NovaDerm,14.99,,,salicylic acid,150ml
+SS-004,SPF Shield Mineral Sunscreen SPF50,"Broad-spectrum mineral sunscreen with zinc oxide. Leaves a soft matte finish.",Skincare,SunKind,22.00,all,,,zinc oxide; titanium dioxide,60ml
+SS-005,GlowDrop Vitamin C Serum,"Brightening serum for dull uneven tone. Lightweight water-gel texture.",Skincare,BrightLab,34.00,,,vitamin c; ferulic acid,30ml
+SS-006,BarrierBoost Ceramide Cream,"Rebuilds skin barrier overnight. Ideal after retinoids or harsh weather.",Skincare,AuraLab,27.99,dry; sensitive,barrier repair,,45ml
+SS-007,OilControl Mattifying Gel,"Oil-free gel moisturizer that keeps shine away for combination skin.",Skincare,NovaDerm,18.50,oily; combination,,,40ml
+SS-008,SoothEase Centella Mist,"Calming facial mist with centella and panthenol. Use after cleansing or over makeup.",Skincare,HerbNest,16.00,,,centella; panthenol,100ml
+SS-009,NightRenew Retinol Cream 0.3%,"Beginner-friendly retinol cream for fine lines. Use at night with SPF next day.",Skincare,AgeWise,39.99,,,retinol; niacinamide,30ml
+SS-010,PoreRefine Clay Mask,"Weekly clay mask that draws out impurities. Rinse after 10 minutes.",Skincare,NovaDerm,19.99,oily,,,kaolin; charcoal,75ml
+SS-011,LipRescue Butter,"Ultra-rich lip butter for flaky winter lips. Softens within minutes.",Body Care,HerbNest,9.99,dry,,,shea butter; beeswax,15g
+SS-012,SoftHands Repair Cream,"Intensive hand cream for dry cracked knuckles. Absorbs without greasy residue.",Body Care,AuraLab,12.50,,,urea; shea butter,75ml
+SS-013,Everyday Body Lotion,"Everyday lotion for normal to dry body skin. Light coconut scent.",Body Care,HerbNest,11.00,,,glycerin; aloe,250ml
+SS-014,Blemish Spot Gel,"Targeted gel for occasional breakouts. Dab on clean skin twice daily.",Skincare,NovaDerm,13.99,,,benzoyl peroxide; tea tree,15ml
+SS-015,SilkWash Cream Cleanser,"Creamy cleanser that leaves skin soft. Great for dry and mature skin.",Skincare,AuraLab,17.50,dry; mature,,,ceramides; squalane,120ml
+SS-016,ToneEven Niacinamide Serum,"Serum for visible pores and uneven texture. Layer under moisturizer.",Skincare,BrightLab,26.00,,,niacinamide; zinc,30ml
+SS-017,EyeLift Peptide Gel,"Cooling eye gel for puffiness and fine lines around the eyes.",Skincare,AgeWise,31.00,,,peptides; caffeine,15ml
+SS-018,KidsGentle Wash,"Tear-free wash for kids sensitive skin. Hypoallergenic and dermatologist tested.",Body Care,SunKind,10.50,sensitive,,,aloe; oatmeal,200ml
+SS-019,ScalpCalm Leave-In Serum,"Leave-in serum for itchy dry scalp. Does not weigh hair down.",Hair Care,HerbNest,21.00,dry,,,tea tree; peppermint,50ml
+SS-020,MatteFinish Setting Mist,"Sets makeup and controls midday shine. Alcohol-free formula.",Makeup,NovaDerm,15.00,oily; combination,,,witch hazel; niacinamide,100ml
+SS-021,DeepClean Micellar Water,"Micellar water that lifts makeup and sunscreen residue in one swipe.",Skincare,BrightLab,12.99,all,,,micelles; glycerin,250ml
+SS-022,HydraSheet Face Mask 5-Pack,"Single-use sheet masks soaked in hyaluronic serum. Use 1–2 times weekly.",Skincare,AuraLab,14.00,,,hyaluronic acid; aloe,5 masks
+SS-023,AntiFrizz Hair Oil,"Lightweight hair oil for frizz and dryness on ends. Apply to damp or dry hair.",Hair Care,HerbNest,23.50,,,argan oil; jojoba,50ml
+SS-024,UrbanShield Antioxidant Mist,"Antioxidant mist for city pollution defense. Spritz AM before SPF.",Skincare,SunKind,19.00,all,pollution protection,green tea; vitamin e,80ml
+SS-025,CalmNight Pillow Cream,"Night cream with lavender and ceramides for stressed dry skin.",Skincare,AuraLab,28.00,dry; sensitive,,ceramides; lavender,50ml
