@@ -75,7 +75,7 @@ class Handler(BaseHTTPRequestHandler):
                     "ok": True,
                     "products": len(_products),
                     "reviews": len(_reviews),
-                    "retriever": "local-tfidf-stub",
+                    "retriever": "local-tfidf", "amd": __import__("app.amd_llm", fromlist=["x"]).settings() | {"configured": __import__("app.amd_llm", fromlist=["x"]).configured()},
                 },
             )
         if path == "/api/catalogue":

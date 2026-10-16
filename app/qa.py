@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from . import amd_llm
 from .similarity import LocalTfidfIndex, build_corpus_texts
 
 
@@ -25,7 +26,8 @@ def ask(
             "answer": "Ask a product question, e.g. which SKU for dry skin?",
             "recommendations": [],
             "citations": [],
-            "retriever": "local-tfidf-stub",
+            "retriever": "local-tfidf",
+            "llm": {"used": False},
         }
 
     texts, meta = build_corpus_texts(products, reviews)
@@ -104,13 +106,27 @@ def ask(
         if len(unique_cites) >= top_k + 3:
             break
 
+    llm = {"used": False, "provider": None, "model": None, "reason": "AMD_API_KEY not set"}
+    if recommendations and amd_llm.configured():
+        try:
+            answer = amd_llm.grounded_answer(question, recommendations, unique_cites)
+            st = amd_llm.settings()
+            llm = {"used": True, "provider": "AMD TokenFactory (Radeon Cloud)", "model": st["model"], "reason": None}
+        except Exception as exc:  # fall back to deterministic answer
+            llm["reason"] = f"AMD call failed: {type(exc).__name__}"
+
     return {
         "question": question,
         "answer": answer,
         "recommendations": recommendations,
         "citations": unique_cites,
-        "retriever": "local-tfidf-stub",  # swap label when AMD embeddings land
-        "note": "Retrieval is a local TF-IDF stub. AMD ROCm embeddings plug in via app/similarity.py.",
+        "retriever": "local-tfidf",
+        "llm": llm,
+        "note": (
+            "Answer phrased by an AMD-hosted LLM, grounded in the cited evidence."
+            if llm["used"]
+            else "Offline fallback answer (" + str(llm["reason"]) + "). Retrieval is local TF-IDF."
+        ),
     }
 
 

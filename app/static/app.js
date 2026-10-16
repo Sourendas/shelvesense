@@ -3,7 +3,7 @@ async function health() {
   try {
     const r = await fetch("/api/health");
     const j = await r.json();
-    el.textContent = `OK · ${j.products} SKUs · ${j.reviews} reviews · ${j.retriever}`;
+    el.textContent = `OK · ${j.products} SKUs · ${j.reviews} reviews · ${j.retriever} · LLM: ${j.amd && j.amd.configured ? 'AMD ' + j.amd.model : 'offline fallback'}`;
     el.classList.add("ok");
   } catch (e) {
     el.textContent = "server offline — run: python3 app/server.py";
@@ -96,7 +96,7 @@ async function askQuestion(q) {
   }
   const note = document.createElement("p");
   note.className = "meta";
-  note.textContent = j.note || "";
+  note.textContent = (j.llm && j.llm.used ? "[AMD " + j.llm.model + "] " : "") + (j.note || "");
   cites.appendChild(note);
 }
 
